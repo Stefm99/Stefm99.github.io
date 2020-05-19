@@ -1,0 +1,30 @@
+.background {
+    background-image: url("../images/light_texture2263.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content {
+    text-align: center;
+}
+
+.profile-picture {
+    max-height:300px;
+    width: auto;
+    height: auto;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blocks {
+    display: flex;
+    flex-wrap: wrap;
+}
