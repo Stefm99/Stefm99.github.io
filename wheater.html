@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Current Weather</title>
+</head>
+<body>
+<div id="weather">
+<div id="description"></div>
+<h1 id="temp"></h1>
+<div id="location"></div>
+</div>
+<script lang="text/javascript">
+function weatherBalloon( cityID ) {
+var key = '{yourkey}';
+ fetch('https://api.openweathermap.org/data/2.5/weather?id=bad1910d23638f9aadd5961a5ac71bbe'
+ .then(function(resp) { return resp.json() }) // Convert data to json
+ .then(function(data) {
+console.log(data);
+ })
+ .catch(function() {
+// catch any errors
+ });
+}
+window.onload = function() {
+ weatherBallon( 6167865 );
+}
+function drawWeather( d ) {
+var celcius = Math.round(parseFloat(d.main.temp)
+var fahrenheit = Math.round(((parseFloat(d.main.temp)
+document.getElementById('description').innerHTML 
+document.getElementById('temp').innerHTML =
+document.getElementById('location').innerHTML = 
+}
+<div id="weather">
+ <div id="description"></div>
+ <h1 id="temp"></h1>
+ <div id="location"></div>
+</div>
+// future javascript
+</script>
+</body>
+</html>

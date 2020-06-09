@@ -3,6 +3,17 @@
 }
 
 .dashed {
-    outline-style: dashed;
-    outline-color:red;
+    border-style: dashed;
+    border-color:red;
+  margin: 5px 10px;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+.icon-social {
+    color: black;
 }

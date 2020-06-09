@@ -10,7 +10,7 @@
     
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
-
+    <script src="https://use.fontawesome.com/48ff841c6b.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -69,7 +69,7 @@
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="#portfolio-section" class="nav-link">Smart technology</a></li>
                 <li><a href="#blog-section" class="nav-link">Smart project</a></li>
-                <li><a href="#contact-section" class="nav-link">Neem contact met me op</a></li>
+                <li><a href="#contact-section" class="nav-link">Conclusie</a></li>
               </ul>
             </nav>
 
@@ -93,7 +93,41 @@
               <div class="header-content">
                 <h1 class="text-white">Welkom op mijn portfolio</h1>
                 <p class="text-white">Student facility management <span class="mx-3">|</span> Minor Smart Industry</p>
-                <p><a href="#contact-section" class="btn smoothscroll btn-primary">Neem contact met me op</a></p>
+                <p><a href="#contact-section" class="btn smoothscroll btn-primary">Conclusie</a></p>
+                <br><br> <br><br><br>
+                <div id="weather">
+                                        
+                  <div id="description"></div>
+                  <h1 id="temp"></h1>
+                  <div id="location"></div>
+              </div style="color: ">
+                <script>
+                function weatherBalloon( cityID ) {
+                var key = '871eb22b8b64e67a2282f946b1db79b0';
+                fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + key)  
+                .then(function(resp) { return resp.json() }) // Convert data to json
+                .then(function(data) {
+                  drawWeather(data); // Call drawWeather
+                })
+                .catch(function() {
+                  // catch any errors
+                });
+              }
+              
+              window.onload = function() {
+                weatherBalloon( 2750053 );
+              }
+              
+              function drawWeather( d ) {
+                var celcius = Math.round(parseFloat(d.main.temp)-273.15);
+                var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32); 
+                
+                document.getElementById('description').innerHTML = d.weather[0].description;
+                document.getElementById('temp').innerHTML = celcius + '&deg;';
+                document.getElementById('location').innerHTML = d.name;
+              }
+                </script>
+              </div>
               </div>
             </div>
           </div>
@@ -108,14 +142,16 @@
             <img class="profile-picture" src="images/cv foto.jpg" alt="Image" width="500" height="333">
           </div>
           <div class="col-6 center">
-            <p class="text-secondary">
               <p class="dashed">
               Mijn naam is Stef Merkx. 
-              Ik zit momenteel in het derde jaar van de opleiding facility management 
+              Ik zit in het derde jaar van de opleiding facility management 
               en ik ben momenteel bezig met de minor Smart Industry. 
               U kunt in dit porfolio mijn ontwikkelingen lezen en hoe ik de 
-              desbetreffende competenties heb behaald met betrekking tot de minor Smart Industry
-             </p>  
+              desbetreffende competenties heb behaald met betrekking tot de minor Smart Industry.
+              <br> <br>
+              E-mailadres > Stmerkx@gmail.com
+              <br>
+              Telefoonnummer > 06-23117158 
               <span class="mx-"></span> 
           
             </p>
@@ -131,18 +167,60 @@
               <h5 class="section-title text-center mb-5">Wat houdt Smart start in?</h5>
              </div>
           
-            <p class="section-title text-center mb-5">Het doel van Smart start is om meer kennis te ontwikkelen over Smart Industry. U kunt hierbij denken aan het Smart Industry model en het bepalen van de Smart research. Tijdens dit vak heb ik ook meer geleerd over 3d-printing en het maken van een student journey</p>
-            <p class="section-title text-center mb-5">Student journey</p>
-            <img class="profile-picture" src="images/smartstart.jpg" alt="Image" width="500" height="333">
+            <p class="section-title text-center mb-5">Het doel van Smart start is om meer kennis te ontwikkelen over Smart Industry. U kunt hierbij denken aan het Smart Industry model en het bepalen van de Smart research. Tijdens dit vak heb ik ook meer geleerd over 3d-printing en het maken van een student journey.</p>
+            <h5 class="section-title text-center mb-5">Student journey</H5>
+            <div class="section-title text-center mb-5">
+              <a href="images/Naamloos.png" class="item-wrap fancybox mb-4">
+                <span class="icon-search2"></span>
+                <img class="img-fluid" src="images/Naamloos.png">
+              </a>
 
           </div>
-          <h5 class="section-title text-center mb-5">1. Beschrijft de mate van volwassenheid van een organisatie m.b.t. Smart Industry in een business case</h5>
-          <h5 class="section-title text-center mb-5"> omschrijving volwassenheid </h5>
-          <h5 class="section-title text-center mb-5">2. Communiceert op effectieve wijze zijn bevindingen naar verschillende doelgroepen</h5>
-          <h6 class="section-title text-center mb-5"> Tijdens de lessen heb ik zeker vooruitgang laten zien bij deze competentie. In het begin van de minor zou ik niet snel degene zijn die docenten mailt, maar op het einde deed ik dit wel. Hierin heb ik dan ook een mooie vooruitgang gemaakt en tijdens het project is dit nog meer naar voren gekomen.
+          <h4 class="section-title text-center mb-5"> 1. Beschrijft de mate van volwassenheid van een organisatie m.b.t. Smart Industry in een business case</h4>
+          <div class="section-title text-center mb-5">
+              <a href="images/Wiel_0.jpg" class="item-wrap fancybox mb-4">
+                <span class="icon-search2"></span>
+                <img class="img-fluid" src="images/Wiel_0.jpg" width="400" height="500">
+              </a>
+
+            </div>
+            <h6 class="section-title text-center mb-5"> Door middel van het bovenstaande model ga ik laten zien dat ik beschik over deze competentie. Ik ga drie onderdelen uitwerken en als organisatie gebruik ik BrabantZorg. <br> Ik heb namelijk een meeloopstage gevolgd bij BrabantZorg en daardoor weet ik veel over deze organisatie.</h6>
+            <h5 class="section-title text-center mb-5">De fases van volwassenheid</h5>
+            <div class="section-title text-center mb-5">
+              <a href="images/Digitale-volwassenheid-niveaus.png" class="item-wrap fancybox mb-4">
+                <span class="icon-search2"></span>
+                <img class="img-fluid" src="images/Digitale-volwassenheid-niveaus.png" >
+              </a>
+
+          </div>
+              <ol>
+                <li>Onbeheerd is het niveau waarin de organisatie niet of nauwelijks aan informatiemanagement doet. Men zet hier en daar wat tools in, maar het helpt de organisatie niet met de digitale strategie.</li>
+                <li>Beginnend heeft de organisatie al wat meer zicht op het belang van informatiemanagement voor de digitale strategie. Maar wat er gebeurt is meer ad-hoc en tijdelijk van aard. Er is ook niet of nauwelijks sprake van organisatiebrede initiatieven.</li>
+                <li>Lerend niveau is een belangrijke fase in de weg naar een succesvolle digitale transformatie. De organisatie heeft een duidelijke digitale strategie waar men organisatiebreed aan wil werken.</li>
+                <li>Responsief niveau is de organisatie in staat om goed te luisteren naar de signalen van de verschillende doelgroepen en daar adequaat op te reageren. De digitale strategie wordt regelmatig aangepast naar de veranderende omstandigheden.</li>
+                <li>Voorspellend niveau is voor de organisaties die in staat zijn om digitale middelen zelfstandig beslissingen te laten nemen die de doelgroepen nóg beter bedienen. De organisatie maakt een continue transformatie door.</li>
+              </ol> 
+              
+
+            <H5 class="section-title text-center mb-5">Smart Working</H5>
+              <p class="section-title text-center mb-5">Nieuwe technologieën bieden grote kansen voor elke organisatie. Deze technologieën volgen elkaar snel op en het is daarom belangrijk dat er goed wordt samengewerkt. Op die manier kan er zo efficiënt mogelijk gebruik worden gemaakt van de nieuwe technologieën. 
+              <br> <br> Bij BrabantZorg wordt er zeker goed samengewerkt. Er zijn veel projectteams en bij elk nieuw project wordt gekeken wie er een toegevoegde waarde zou zijn voor het resultaat. Het duurt hierdoor wel lang voordat er een team staat en hierdoor is de technologie niet optimaal. BrabantZorg gebruikt dus nooit de nieuwste technieken, omdat de besluitvorming te traag is. Het zit hiermee op niveau twee, omdat ze wel zicht hebben op het belang van informatiemanagement voor de digitale strategie.</p>
+              <h5 class="section-title text-center mb-5">Servitization</h5>
+              <p class="section-title text-center mb-5">Bij Servitization worden er geen producten meer gekocht, maar gehuurd. Hierdoor komt er voor het bedrijf dat het product maakt veel meer dienstverlening bij kijken. BrabantZorg kan zelf moeilijk aan Servitization doen, omdat het geen producten maakt. Ze maken echter wel gebruik van Servitization doordat ze de tablets en telefoons op deze manier hebben ingekocht. 
+              <br><br>  Ze zijn dus goed op de hoogte van deze nieuwe werkwijze en maken er ook gebruik van. Er is hier sprake van niveau drie, omdat ze een plan hebben klaarliggen, waardoor nog veel meer producten op deze manier worden aangeschaft.d</p>
+              <h5 class="section-title text-center mb-5">Digitization</h5>
+              <p class="section-title text-center mb-5">Digitization is een proces, waarbij informatie wordt omgezet in een digitaal bestand. BrabantZorg heeft hier net een grote verandering in gehad. Het systeem is nu volledig online, waardoor het is opgeslagen in de cloud in plaats van op een computer. Hierdoor kan je op elke plek bij je bestanden en het zorgt ervoor dat er beter kan worden thuis gewerkt.
+                <br> <br> Dit is dus een hele goede verandering die ook zeker nodig was om informatie beter om te kunnen zetten in een digitaal bestand. De organisatie heeft dus goed geluisterd naar verschillende doelgroepen en daarom past BrabantZorg in niveau 4 hiermee. </p>
+              <h5 class="section-title text-center mb-5">Conclusie</h5>
+           
+            <p class="section-title text-center mb-5">BrabantZorg weet heel goed dat nieuwe technologieën belangrijk zijn. Door de trage besluitvorming is dit echter nog niet vanzelfsprekend en lopen ze af en toe achter de feiten aan. Ik denk dat ze over het algemeen in fase 2 of 3 zitten, omdat ze nog niet snel kunnen reageren op signalen uit verschillende doelgroepen. De organisatie heeft een steeds duidelijkere digitale strategie , maar dit is nog niet organisatiebreed. </p>
+
+          <h4 class="section-title text-center mb-5">2. Communiceert op effectieve wijze zijn bevindingen naar verschillende doelgroepen</h4>
+          <h6 class="section-title text-center mb-5"> Tijdens de lessen heb ik zeker vooruitgang laten zien bij deze competentie. In het begin van de minor zou ik niet snel degene zijn die docenten mailt, maar op het einde deed ik dit wel. Dit komt vooral, omdat ik vroeger altijd dacht dat een e-mail opstellen moeilijk was als je vragen wou stellen, maar dit bleek toch mee te vallen. Hierin heb ik dan ook een mooie vooruitgang gemaakt en tijdens het project is dit nog meer naar voren gekomen.
+            <br>
             Mijn rol was namelijk voorzitter en daarom heb ik met veel verschillende doelgroepen contact gehad, namelijk met onder andere de han, een fitnessinstructeur, verschillende 65+'ers en meneer ten Hove. Met de meeste personen heb ik ge-e-emaild, maar ook beeldbellen is goed van pas gekomen.
                     </h6>
-          <h5 class="section-title text-center mb-5">3. Werkt actief aan zijn professionele ontwikkeling</h5>
+          <h4 class="section-title text-center mb-5">3. Werkt actief aan zijn professionele ontwikkeling</h4>
 
           <div class="blocks">
             <div class="col-md-6 mb-4">
@@ -170,7 +248,7 @@
                 <div class="service-number mr-4"><span class="icon-fire"></span></div>
                 <div class="service-about">
                   <h3>Omgaan met details</h3>
-                  <p>Bij het programmeren van dit portfolio was het heel belangrijk om geen typefouten te maken. Hierdoor ben ik beter gaan kijken naar de details en snap ik dat het belangrijk is om hierop op te letten</p>
+                  <p>Bij het programmeren van dit portfolio was het heel belangrijk om geen typefouten te maken. Hierdoor ben ik beter gaan kijken naar de details en snap ik dat het belangrijk is om hierop op te letten.</p>
                 </div>
               </div>
             </div>
@@ -180,11 +258,20 @@
                 <div class="service-number mr-4"><span class="icon-magnet"></span></div>
                 <div class="service-about">
                   <h3>Aanpassingsvermogen</h3>
-                  <p>Tijdens het uitvoeren van het project kregen we steeds nieuwe ideeën. Hierdoor heb ik een beter aanpassingsvermogen gekregen en accepteer ik het sneller als iets moet worden aangepast.</p>
+                  <p>Tijdens het uitvoeren van het project kregen we steeds nieuwe ideeën. Hierdoor heb ik een beter aanpassingsvermogen gekregen en accepteer ik het sneller als iets moet worden aangepast. Deze ontwikkeling gaat goed samen met de ontwikkeling over doelenstellen, omdat ik nu begrijp dat als je je doel wil bereiken het soms nodig is om een andere richting in te slaan.</p>
                 </div>
               </div>
             </div>
         </div>
+        <h3 class="section-title text-center mb-5">Student Journey</h3>
+        <div class="section-title text-center mb-5">
+          <a href="images/fail.jpg" class="item-wrap fancybox mb-4">
+            <span class="icon-search2"></span>
+            <img class="img-fluid" src="images/fail.jpg"   width="300" height="300">
+          </a>
+        </a>
+        <br><br>
+        <h6 class="section-title text-center mb-5">De Student Journey heb ik het meest onderschat van alle onderdelen tijdens deze minor. Persoonlijk ben ik heel goed in het uitstellen tot het laatste moment. Zeker als ik het niet leuk vind om eraan te werken. Dit gaat bij tentamens en projecten bijna altijd goed. Het portfolio maken heb ik ook uitgesteld, maar om het toch te halen, ben ik de laatste anderhalve maand van de minor dan ook even gestopt met werken en ben elke dag om half zeven begonnen met het werken aan mijn portfolio. <br><br> Ik ben er echter achter gekomen dat dit helemaal niet zo werkt voor het maken van een student journey. Achteraf ben ik dan ook niet super tevreden over mijn student journey, terwijl ik er wel meer tijd aan heb besteed dan dat ik zou hebben gedaan als ik het gewoon netjes elke week had bijgewerkt. Hier heb ik goed op gereflecteerd en wil ik vanaf nu ook echt een verandering in maken. De student journey heeft me laten zien dat uitstellen niet altijd kan en dat ik verantwoordelijker moet omgaan met dit soort opdrachten.</h6>
 
         </div>
       </div>
@@ -197,48 +284,99 @@
             <h2 class="section-title text-center mb-5">Smart connection</h2>
             <h5 class="section-title text-center mb-5">Wat houdt Smart connection in?</h5>
             <p class="text-secondary">Tijdens Smart connection heb ik heel erg veel geleerd over programmeren. In het begin wist ik niet eens was CSS en HTML waren en nu heb ik er zelf een portfolio meegecreërd. Daarnaast heb ik ook veel geleerd over big data en machine learning.</p>
-            <h5 class="section-title text-center mb-5">1. Past nieuwe technologieën op het gebied van web, data, cloud en AI toe op een praktijkcasus</h5>
-            <h5 class="section-title text-center mb-5">2. Plaatst de casus in een business context</h5>
+            <h5 class="section-title text-center mb-5">Student journey</h5>
+            <div class="section-title text-center mb-5">
+              <a href="images/connection.png" class="item-wrap fancybox mb-4">
+                <span class="icon-search2"></span>
+                <img class="img-fluid" src="images/connection.png">
+              </a>
+<br> <br>
+            <h4 class="section-title text-center mb-5">1. Past nieuwe technologieën op het gebied van web, data, cloud en AI toe op een praktijkcasus</h4>
+            <h6 class="section-title text-center mb-5">Deze competentie heeft een grote rol gespeeld voor mij, omdat ik tijdens deze minor erg veel heb geleerd over nieuwe technologieën. In het begin wist ik niet eens wat AI was, maar nu kan ik zelf een website maken met html en css. Dit heb ik daarna al meteen in een praktijkcasus geoefend door de website te bouwen voor de Helpende Hand. <br><br>
+               Daarnaast heb ik een literair onderzoek gedaan naar wat er gedaan kan worden met Additive Manufacturing. Ook was de Masterclass AI erg interessant, omdat ik nu beter begrijp wat AI is en hoe ik het zou kunnen gebruiken in een toekomstige situatie. Ik weet nu dat AI een hele goede optie kan zijn in de horeca, omdat met behulp van slimme weegschalen en sensoren voedselverspilling kan worden tegengegaan.</h6>
+            <h4 class="section-title text-center mb-5">2. Plaatst de casus in een business context</h4>
+            <h6 class="section-title text-center mb-5">Hieronder staan vier technieken die ervoor hebben gezorgd dat ik een redelijke website kan bouwen. Deze technieken zal ik dan ook vaker gaan gebruiken en kan ik zelfs al direct toepassen. Ik werk momenteel bij de Brabantse Hoeve in Volkel, dit is een bedrijf in de horeca. Zij hebben mij al gevraagd om mee te kijken en tips te geven over de website die ze nu aan het vernieuwen zijn.</h6>
           </div>
-    
-          <div class="col-md-6 mb-4">
-            <div class="service d-flex h-100">
-              <div class="service-number mr-4"><span class="icon-glass"></span></div>
-              <div class="service-about">
-                <h3>HTML</h3>
-                <p>HyperText Markup Language (afgekort HTML) is een op SGML gebaseerde opmaaktaal voor de specificatie van documenten, voornamelijk bedoeld voor het wereldwijde web.</p>
+
+
+
+
+
+          <div class="blocks">
+            <div class="col-md-6 mb-4">
+              <div class="service d-flex h-100">
+                <div class="service-number mr-4"><span class="icon-magnet"></span></div>
+                <div class="service-about">
+                  <h3>Html</h3>
+                  <a href="images/html.png" class="item-wrap fancybox mb-4">
+                    <span class="icon-search2"></span>
+                    <img class="img-fluid" src="images/html.png" >
+                  </a>
+                  <p>HyperText Markup Language (afgekort HTML) is een op SGML gebaseerde opmaaktaal voor de specificatie van documenten, voornamelijk bedoeld voor het wereldwijde web. TML-documenten bevatten op de eerste plaats semantische structuur en tekstuele inhoud van een webpagina; de opmaak en visuele weergave kunnen er ook in worden beschreven, maar daar wordt tegenwoordig gewoonlijk CSS voor gebruikt. Html is het eerste waar ik mee in aanraking kwam toen ik begon met het maken van mijn portfolio. Ik vond het in het begin erg lastig, maar heb het ondertussen redelijk in de vingers zitten. Ik ga zeker verder met het ontwikkelen van mijn html skills en hoop nog veel te leren.</p>
+                </div>
               </div>
             </div>
-          </div>
-    
-          <div class="col-md-6 mb-4">
-            <div class="service d-flex h-100">
-              <div class="service-number mr-4"><span class="icon-video-camera"></span></div>
-              <div class="service-about">
-                <h3>CSS</h3>
-                <p>Cascading Style Sheets (afgekort tot CSS), stijlbladen, zijn een mogelijkheid om de vormgeving van webpagina's los te koppelen van hun feitelijke inhoud en centraal vast te leggen.</p>
+      
+      
+            <div class="col-md-6 mb-4">
+              <div class="service d-flex h-100">
+                <div class="service-number mr-4"><span class="icon-video-camera"></span></div>
+                <div class="service-about">
+                  <h3>CSS</h3>
+                  <a href="images/style.png" class="item-wrap fancybox mb-4">
+                    <span class="icon-search2"></span>
+                    <img class="img-fluid" src="images/style.png" >
+                  </a>
+                  <p>Css staat voor Cascading Style Sheets. Met CSS kunt u de opmaak en vormgeving van uw website vanuit één bestand regelen. Doormiddel van CSS kan het design van de pagina en plaatsing van de pagina elementen tot op de pixel nauwkeurig worden uitgevoerd. CSS heeft me dan ook zeker geholpen om mijn portfolio mooi te maken. Het werd hierdoor beter leesbaar en het werd ook aantrekkelijker om de website te bekijken.</p>
+                </div>
               </div>
             </div>
-          </div>
-    
-          <div class="col-md-6 mb-4">
-            <div class="service d-flex h-100">
-              <div class="service-number mr-4"><span class="icon-fire"></span></div>
-              <div class="service-about">
-                <h3>Javascript</h3>
-                <p>Java is een objectgeoriënteerde programmeertaal. Java is een platformonafhankelijke taal die qua syntaxis grotendeels gebaseerd is op de (eveneens objectgeoriënteerde) programmeertaal C++. Java beschikt echter over een uitgebreidere klassenbibliotheek dan C++.</p>
+      
+            <div class="col-md-6 mb-4">
+              <div class="service d-flex h-100">
+                <div class="service-number mr-4"><span class="icon-fire"></span></div>
+                <div class="service-about">
+                  <h3>Javascript</h3>
+                  <a href="images/js.png" class="item-wrap fancybox mb-4">
+                    <span class="icon-search2"></span>
+                    <img class="img-fluid" src="images/js.png" >
+                  </a>
+                  <p>JavaScript is een veelgebruikte scripttaal om webpagina's interactief te maken en webapplicaties te ontwikkelen. Het was voor mij lastig om html en css te begrijpen, maar ik heb het langste gedaan over Javascript. Het wordt voor mij nu steeds duidelijker, maar ik vind het nog steeds lastig om javacript toe te passen. Ik ga dan ook zeker door met het oefenen hiervan.</p>
+                </div>
               </div>
             </div>
-          </div>
-    
-          <div class="col-md-6 mb-4">
-            <div class="service d-flex h-100">
-              <div class="service-number mr-4"><span class="icon-magnet"></span></div>
-              <div class="service-about">
-                <h3>Portfolio</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius aperiam repudiandae quis ipsa quod, reprehenderit iusto laudantium.</p>
+
+            
+            <div class="col-md-6 mb-4">
+              <div class="service d-flex h-100">
+                <div class="service-number mr-4"><span class="icon-glass"></span></div>
+                <div class="service-about">
+                  <h3>API</h3>
+                  <h6>
+                    Covid-19 cijfers in the 
+                    <div id="land"></div>
+                    </h6>
+                    Het totale aantal doden in Nederland:
+                    <div id="doden"></div>
+                    <script lang="text/javascript">
+                      fetch('https://api.covid19api.com/summary')
+                    .then(function(resp) {return resp.json() }) // Convert data to json
+                    .then(function(data) {
+                    console.log(data);
+                    console.log(data.Countries[119].Country);
+                    console.log(data.Countries[119].TotalDeaths);
+                    document.getElementById("land").innerHTML = (data.Countries[119].Country);
+                    document.getElementById("doden").innerHTML = (data.Countries[119].TotalDeaths);
+                    })
+                    .catch(function()   {   // catch any errors
+                    
+                    });
+                    </script>
+                  <p>De volledige naam van API is Application Programming Interfaces. Ze kunnen webpagina's maken, CSS-stijlen genereren, een  videostream van de gebruikers' webcam onderscheppen en manipuleren of audio samples en 3d-afbeeldingen creëren. Een API is eigenlijk een hulpmiddel in Javascript en kan erg handig zijn. Hierboven heb ik een API toegevoegd over het aantal coronadoden in Nederland en op de startpagina staat het weer in Nijmegen.</p>
+                </div>
               </div>
             </div>
+    
           </div>
     
         </div>
@@ -253,61 +391,49 @@
       <div class="container">
         <div class="row ">
           <div class="col-12 mb-4 position-relative">
-            <h2 class="section-title">Smart business</h2>
-            <h5 class="section-title text-center mb-5">Wat houdt Smart business in?</h5>
-            <p class="text-secondary">De workshops van Smart business vertaalden de technologie in businessmodellen. Hierdoor kreeg ik meer inzicht in hoe je al deze nieuwe technolgieën kan gaan inzetten in het werkveld. Dit werd vooral duideljk, doordat meerdere mensen uit het werkveld een workshop gaven over een casus</p>
-            <h5 class="section-title text-center mb-5">1. Ontwerpt bedrijfsprocessen volgens Smart Industry criteria</h5>
-            <h5 class="section-title text-center mb-5">2. Beschrijft de implicaties voor het gehele business model en
-              voor de positie van de organisatie in de keten (SB22)	</h5>
-          </div>
-          <div class="col-lg-6 order-2 order-lg-1">
-            <img class="img-fluid mb-4" src="images/credo_img_1.jpg" alt="Image">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat repudiandae cupiditate, aspernatur ipsa enim magnam quaerat pariatur vero provident necessitatibus amet saepe officiis labore. Provident deserunt necessitatibus expedita. Voluptate, soluta?</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo praesentium quibusdam minus voluptatem sequi iure amet?</p>
-          </div>
-          <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
-            <div class="mb-5">
-              <strong class="text-black">Photographer</strong>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                  style="width: 89%;">
-                  <span>89%</span>
-                </div>
-              </div>
-            </div>
-            <div class="mb-5">
-              <strong class="text-black">Wedding</strong>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                  style="width: 75%;">
-                  <span>75%</span>
-                </div>
-              </div>
-            </div>
-            <div class="mb-5">
-              <strong class="text-black">Events</strong>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                  style="width: 94%;">
-                  <span>94%</span>
-                </div>
-              </div>
-            </div>
-            <div class="mb-5">
-              <strong class="text-black">Conferences</strong>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                  style="width: 94%;">
-                  <span>94%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </div>
+            <h2 class="section-title text-center mb-5">Smart business</h2>
 
+            <h5 class="section-title text-center mb-5">Wat houdt Smart business in?</h5>
+            <p class="text-secondary">De workshops van Smart business vertaalden de technologie in businessmodellen. Hierdoor kreeg ik meer inzicht in hoe je al deze nieuwe technolgieën kan gaan inzetten in het werkveld. Dit werd vooral duideljk, doordat meerdere mensen uit het werkveld een workshop gaven over een casus.</p>
+            <br><h5 class="section-title text-center mb-5">Student Journey</h5>
+            <div class="row">
+              <div class="section-title text-center mb-5">
+                <a href="images/business.png" class="item-wrap fancybox mb-4">
+                  <span class="icon-search2"></span>
+                  <img class="img-fluid" src="images/business.png">
+                </a>
+
+<br><br>
+            <h4 class="section-title text-center mb-5">1. Ontwerpt bedrijfsprocessen volgens Smart Industry criteria</h4>
+            <img class="img-fluid mb-4" src="images/businessproces.png" alt="Image">
+            <h6 class="section-title text-center mb-5">Dit model heeft mij erg geholpen om bedrijfsprocessen te kunnen ontwerpen aan de hand van Smart Industry criteria. Met dit model kan je namelijk makkelijk zien hoe een bedrijf zijn processen slimmer kan inrichten. natuurlijk is dit model vooral gericht op de maakindustrie, maar ook voor bedrijven in de dienstverlening is dit een interessant model. <br><br>
+               Als voorbeeld neem ik BrabantZorg waar ik eerder ook al over schreef. BrabantZorg kan ook een aantal processen verbeteren aan de hand van dit model. BrabantZorg zou bijvoorbeeld meer kunnen doen met zonnepanelen, maar zou ook kunnen kijken hoe robots het werk makkelijker kunnen maken voor de verpleegkundigen, want er is nog steeds een groot personeels te kort in de zorg. Daarnaast zou er ook meer gedaan kunnen worden met alle data die BrabantZorg heeft om zo bepaalde trends te zien waarop ze kunnen anticiperen.</h6>
+
+            <h4 class="section-title text-center mb-5">2. Beschrijft de implicaties voor het gehele business model en
+              voor de positie van de organisatie in de keten	</h4>
+              <p class="text-secondary">Door middel van het vijf krachten model en de waardeketen kan ik op een veel betere manier de implicaties voor het gehel business model laten zien. Daarnaast kan ook de positie van de organisatie in de keten beter beschreven worden.</p>
+              <div class="blocks">
+                <div class="col-md-6 mb-4">
+                  <div class="service d-flex h-100">
+                    <div class="service-about">
+                      <h5>Vijf krachten model</h5>
+                      <img class="profile-picture" src="images/porter.png" alt="Image" style="height: 230px">
+                      <p>Het vijf krachten model van porter laat zien waar de implicaties liggen van een bepaalde business. Het business model moet namelijk zo goed zijn dat er rekening wordt gehouden met deze vijf factoren en toch nog winst maakt. We nemen bij dit voorbeeld Samsung als voorbeeld. Samsung heeft een aantal leveranciers, waar ze erg afhankelijk van zijn, want zonder die leveranciers kan er geen eindproduct ontstaan. De potentiële toetreders zijn belangrijk, omdat als iedereen zomaar telefoons kan gaan maken, dan ontstaat er erg veel concurrentie. De afnemers zijn uiteindelijk degene die het product in dit geval kopen en daarom moet het duidleijk zien wie dit zijn. Als de concurrentie laag is dan kan Samsung zelf de prijs bepalen, maar met veel concurrentie zullen ze toch op prijs of product moeten concurreren. Daarnaast is substitutie belangrijk, omdat als een product makkelijk na te maken is dan is het minder aantrekkelijk om de hoofdprijs te betalen.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="service d-flex h-100">
+                    <div class="service-about">
+                      <h5>Waarde keten</h5>
+                      <img class="profile-picture" src="images/keten.jpg" alt="Image">
+                      <p>Samsung is in dit geval de afnemer, maar ook de leverancier en 'onze organisatie'. Samsung maakt namelijk niet alleen van een halffabricaat een telefoon, maar maakt ook zelf veel andere onderdelen. Ze doen hierdoor heel erg aan valuechain door zich bezig te houden met het hele proces. Dit is interessant voor hen om te doen, omdat ze zelf hun wensen en eisen kunnen doorvoeren en het product kunnen kopen tegen een hele lage prijs, want er hoeft geen winstmarge op te zitten.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+         
 
     
 
@@ -320,66 +446,66 @@
             <h2 class="section-title text-center mb-5">Smart technology</h2>
             <h5 class="section-title text-center mb-5">Wat houdt Smart technology in?</h5>
             <p class="text-secondary">Smart technology was erg interessant, omdat we er een IoT-schakeling gingen bouwen voor het automatiseren van de lichtintensiteit en aarde-vochtigheid van een plant. Dit had ik nog nooit gedaan en heeft mij veel nieuwe inzichten gegeven.</p>
-            <h5 class="section-title text-center mb-5">1. past nieuwe technologieën op het gebied van van IoT, Robotica en 3D-printen toe op een praktijkcasus</h5>
-            <h5 class="section-title text-center mb-5">2. plaatst de casus in een business context</h5>
+            <h5 class="section-title text-center mb-5">Student journey</h5>
+            <div class="section-title text-center mb-5">
+              <a href="images/technology.png" class="item-wrap fancybox mb-4">
+                <span class="icon-search2"></span>
+                <img class="img-fluid" src="images/technology.png">
+              </a>
+
+<br><br>
+            <h5 class="section-title text-center mb-5">1. Past nieuwe technologieën op het gebied van van IoT, Robotica en 3D-printen toe op een praktijkcasus</h5>
+            <div class="section-title text-center mb-5">
+              <a href="images/lampjes.jpg" class="item-wrap fancybox mb-4">
+                <span class="icon-search2"></span>
+                <img class="img-fluid" src="images/lampjes.jpg" height="200" width="200">
+              </a>
+             
+              <a href="images/pcb.png" class="item-wrap fancybox mb-4">
+                <span class="icon-search2"></span>
+                <img class="img-fluid" src="images/pcb.png" height="300" width="200">
+              </a>
+              <a href="images/WhatsApp Image 2020-06-04 at 08.11.01.jpeg" class="item-wrap fancybox mb-4">
+                <span class="icon-search2"></span>
+                <img class="img-fluid" src="images/WhatsApp Image 2020-06-04 at 08.11.01.jpeg" height="200" width="200">
+              </a>
+
+                <video width="200" height="200" controls>
+                  <source src="images/WhatsApp Video 2020-06-02 at 15.16.29.mp4" type="video/mp4">
+                  <source src="images/WhatsApp Video 2020-06-02 at 15.16.29.mp4" type="video/ogg">
+                Your browser does not support the video tag.
+                </video>
+                
+                <h6 class="section-title text-center mb-5">Persoonlijk had ik erg veel moeite met dit vak. De uitleg was (zeker in het begin) niet optimaal en ik snapte niet goed wat ik later aan dit vak zou hebben.
+                  Hierdoor had ik ook heel weinig motivatie om aan de slag te gaan voor dit vak. Tijdens dit vak heb ik zelfs nog gevraagd of ik een vervangende opdracht mocht maken. Toen dit niet mocht, vond ik dit in eerste instantie natuurlijk heel vervelend, maar ik heb niet opgegeven en ben toch begonnen met werken aan Smart Technology. 
+                   Dit betekent veel voor mij, omdat ik het vroeger allang had opgegeven. Ik heb dus zeker een persoonlijke ontwikkeling doorgemaakt door dit vak, maar het heeft me ook meer kennis opgeleverd over Smart Technology. <br><br> 
+                   Het is niet zo dat ik dit vak nu helemaal onder de knie heb, maar ik heb nu wel een goed beeld over hoe het werkt en dat is voor mij als facility manager al heel belangrijk. Het lassen heb ik samengedaan met twee klasgenoten, omdat we wisten dat we zelf te weinig kennis in huis hebben, maar met z'n drieën hebben we toch een mooi resultaat neergezet.
+                  Ik vergelijk ICT ookwel met de bouw op dit punt. Je hoeft het niet zo goed te kunnen als hen, zolang je maar mee kan praten en begrijpt wat ze bedoelen.</h6>
+
+
+            <h5 class="section-title text-center mb-5">2. Plaatst de casus in een business context</h5>
+            <div class="section-title text-center mb-5">
+              <a href="images/investeringsmodel.png" class="item-wrap fancybox mb-4">
+                <span class="icon-search2"></span>
+                <img class="img-fluid" src="images/investeringsmodel.png" width="500" height="600">
+              </a>
+            <h6 class="section-title text-center mb-5">Het uiteindelijke doel van dit vak was om een automatische bewatering te hebben voor een plant. Dit laat natuurlijk al goed zien wat je kan maken met dit vak. Het is een hele investering om dit als boer te maken, maar kan wel erg handig zijn. Het heeft namelijk veel voordelen om een automatische bewatering te hebben.
+         <br> <br>
+            <ol>
+             <li style="text-align: left;">Doelgericht en waterbesparend</li> 
+             <li style="text-align: left;">Tijdbesparend</li> 
+            </ol> 
+              <br>
+             
+              <br>
+              Zeker in deze droge tijden is waterbesparing een belangrijk onderdeel voor boeren. Een boer kan dus goed kijken naar een investeringsmodel om daarmee te gaan investeren in een waterbesparend systeem.
+            </h6>
+
           </div>
         </div>
 
 
-        <div class="row">
-          <div class="col-md-6 col-lg-4 item">
-            <a href="images/img_1.jpg" class="item-wrap fancybox mb-4">
-              <span class="icon-search2"></span>
-              <img class="img-fluid" src="images/img_1.jpg">
-            </a>
-            <a href="images/img_2.jpg" class="item-wrap fancybox mb-4">
-              <span class="icon-search2"></span>
-              <img class="img-fluid" src="images/img_2.jpg">
-            </a>
-            <a href="images/img_3.jpg" class="item-wrap fancybox mb-4">
-              <span class="icon-search2"></span>
-              <img class="img-fluid" src="images/img_3.jpg">
-            </a>
-            <a href="images/img_10.jpg" class="item-wrap fancybox mb-4">
-              <span class="icon-search2"></span>
-              <img class="img-fluid" src="images/img_10.jpg">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4 item">
-            <a href="images/img_1.jpg" class="item-wrap fancybox mb-4">
-              <span class="icon-search2"></span>
-              <img class="img-fluid" src="images/img_4.jpg">
-            </a>
-            <a href="images/img_5.jpg" class="item-wrap fancybox mb-4">
-              <span class="icon-search2"></span>
-              <img class="img-fluid" src="images/img_5.jpg">
-            </a>
-            <a href="images/img_8.jpg" class="item-wrap fancybox mb-4">
-              <span class="icon-search2"></span>
-              <img class="img-fluid" src="images/img_8.jpg">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4 item">
-            <a href="images/img_6.jpg" class="item-wrap fancybox mb-4">
-              <span class="icon-search2"></span>
-              <img class="img-fluid" src="images/img_6.jpg">
-            </a>
-            <a href="images/img_7.jpg" class="item-wrap fancybox mb-4">
-              <span class="icon-search2"></span>
-              <img class="img-fluid" src="images/img_7.jpg">
-            </a>
-            <a href="images/img_9.jpg" class="item-wrap fancybox mb-4">
-              <span class="icon-search2"></span>
-              <img class="img-fluid" src="images/img_9.jpg">
-            </a>
-          </div>
-        </div>
-
-        
-      </div>
-
-    </section>
-
+       
 
     <section class="site-section bg-primary">
       <div class="container">
@@ -391,26 +517,21 @@
         <div class="owl-carousel slide-one-item">
           <div class="slide">
             <blockquote>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste sunt nobis modi, ducimus magnam sint? Soluta delectus mollitia, incidunt reprehenderit rerum tempore optio excepturi aut, error voluptatem laborum quae eum.</p>
-              <p><cite>&mdash; Mariêlle van den Brand</cite></p>
+              <p>De samenwerking met Stef verliep goed. Stef nam vaak initiatief en werkte duidelijk aan het verbeteren van zijn voorzittersrol.</p>
+              <p><cite>&mdash; Max Platter</cite></p>
             </blockquote>
           </div>
           <div class="slide">
             <blockquote>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, veniam, quos optio magnam aliquid est sequi cupiditate tempore libero excepturi nam laudantium consequuntur quia iste dolor fugit quas?</p>
-              <p><cite>&mdash; Nico Merkx</cite></p>
+              <p>Tijdens Smart Project heb ik met Stef samengewerkt aan de Helpende Hand. Stef is een prettige en gestructureerde projectpartner om mee samen te werken.</p> 
+              <p><cite>&mdash; Ralph van Aken</cite></p>
             </blockquote>
           </div>
-          <div class="slide">
-            <blockquote>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum veniam officiis placeat tempore, voluptates quis, odit mollitia neque, quisquam sint temporibus in ullam delectus modi repudiandae expedita! Cupiditate aspernatur illum adipisci recusandae beatae ea impedit.</p>
-              <p><cite>&mdash; Liam van Zutphen</cite></p>
-            </blockquote>
-          </div>
+        
         <div class="slide">
           <blockquote>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum veniam officiis placeat tempore, voluptates quis, odit mollitia neque, quisquam sint temporibus in ullam delectus modi repudiandae expedita! Cupiditate aspernatur illum adipisci recusandae beatae ea impedit.</p>
-            <p><cite>&mdash; Douwe Koenders</cite></p>
+            <p>Stef heeft mij op verschillende manieren geholpen. Zo heeft hij geholpen met mijn API en  met een aantal andere opmaakstukken. Daarnaast is het altijd fijn om met Stef samen te werken, zoals we deden met het solderen, omdat hij erg proactief en energiek is.</p>
+            <p><cite>&mdash; Anthony Stellaard</cite></p>
           </blockquote>
         </div>
         </div>
@@ -427,11 +548,36 @@
             <h2 class="section-title text-center mb-5">Smart project</h2>
             <h5 class="section-title text-center mb-5">Wat houdt Smart project in?</h5>
             <p class="text-secondary">Nadat we zes weken les hadden gehad, kregen we een opdracht uit de praktijk. Bij ons kon deze helaas niet doorgaan, vanwege de coronacrisis en daarom hebben we zelf een opdracht bedacht.</p>
+            <h5 class="section-title text-center mb-5">Student Journey</h5>
+            <a href="images/project.png" class="item-wrap fancybox mb-4">
+              <span class="icon-search2"></span>
+              <img class="img-fluid" src="images/project.png">
+            </a>
+
+           
             <h5 class="section-title text-center mb-5">1. Ontwikkelt een prototype van de oplossings(richting)</h5>
+          
+            <p>Door te klikken op de onderstaande link gaat u naar het prototype van onze website. Wij hebben ervoor gekozen om onze website niet te maken met html en css, omdat wij daarin niet duidelijk konden laten zien wat ons einddoel is. Door het te laten zien op wix kunnen we altijd nog de overstap maken naar een eigen website. Ralph heeft de opzet van de website gemaakt en daarna zijn we verder gaan brainstormen. Hieruit zijn nog een hoop aanpassingen gekomen die we samen hebben veranderd.</p>
+            <p><a href="https://ralphaken.wixsite.com/dehelpendehand">Onze website</a></p>
+            
             <h5 class="section-title text-center mb-5">2. Draagt vanuit verschillende rollen bij aan het succes van een projectteam </h5>
+            <a href="images/belbin-schema.jpg" class="item-wrap fancybox mb-4">
+              <span class="icon-search2"></span>
+              <img class="img-fluid" src="images/belbin-schema.jpg" height="300" width="300">
+            </a>
+            <p> Ons team had duidelijk de afspraak dat iedereen een andere rol aannam dan ze normaal waren. Wij vonden dit project namelijk de perfecte manier om te kijken of we ook andere rollen konden aannemen dan dat we normaal deden. Voor mij hield dit in dat ik normaal bedrijfsman ben, maar nu voorzitter. Hierdoor zie je bepaalde visies vanuit een andere hoek en daardoor denk je er anders over na. Als voorbeeld als bedrijfsman hoef je alleen na te denken over je eigen taken (bijvoorbeeld het maken van een businessmodel), maar als voorzitter moet je zorgen dat iedereen tevreden is met zijn taak en de taken daarna ook controleren.</p>
+
             <h5 class="section-title text-center mb-5">3. Vertaalt een praktijkcasus naar een onderzoeksplan, voert deze uit en evalueert de kwaliteit van uitvoering</h5>
+            <p>Na het gebruik van service design thinking en brainstormen hebben we een praktijkcasus gevonden. Wij zagen namelijk dat veel ouderen het moeilijk hebben in deze coronatijd. We willen deze helpen door een gecentraliseerd platform te maken, waar ze met elkaar spelletjes kunnen spelen en ook kunnen vragen om hulp van studenten, vrijwilligers en ondernemers. We hebben onderzocht wie de doelgroep is en een plan van aanpak geschreven. Daarnaast hebben we een businessmodel gemaakt en verschillende doelgroepen geïnterviewd. We hebben al deze informatie gebruikt om een zo'n goed mogelijke website te bouwen.</p>
             <h5 class="section-title text-center mb-5">4. Draagt actief bij aan een optimale werksfeer sfeer binnen en buiten zijn team</h5>
-            <h5 class="section-title text-center mb-5">5. ontwikkelt een professioneel netwerk</h5>
+            <div class="section-title text-center mb-5">
+              <a href="images/medewerker.jpg" class="item-wrap fancybox mb-4">
+                <span class="icon-search2"></span>
+                <img class="img-fluid" src="images/medewerker.jpg">
+              </a>
+              <p>Dit is één van de weinige punten waar ik mezelf niet echt verder heb ontwikkeld. Dat komt vooral, omdat ik vind dat ik dit al heel erg goed doe. Vaak ben ik degene die over iets anders dan school begint en nagaat of iedereen tevreden is met de taak die ze hebben gekregen. De werksfeer was daarnaast al heel goed binnen ons team en we hebben elkaar ook zeker op persoonlijk vlak beter leren kennen. Ik heb dus vooral verder geoefend voor het werkveld. </p>
+            <h5 class="section-title text-center mb-5">5. Ontwikkelt een professioneel netwerk</h5>
+            <p>Wij hebben dit als groep erg goed aangepakt vind ik. Iedereen heeft wel met iemand contact gelegd buiten ons huidige netwerk. We hebben met verschillende scholen contact gehad, maar ook met docenten, verschillende ouderenbonden en een aantal ondernemers. Daarnaast heb ik ook een aantal connecties opgebouwd met mensen uit de klas, waardoor mijn professionele netwerk zich verder heeft ontwikkeld. Ik ben dan ook heel tevreden over het netwerk dat we hebben opgebouwd</p>
           </div>
 
 
@@ -442,59 +588,108 @@
       <div class="container">
         <div class="row">
           <div class="col-12 mb-5 position-relative">
-            <h2 class="section-title text-center text-white mb-5">neem contact met me op</h2>
+            <h2 class="section-title text-center text-white mb-5">Conclusie</h2>
+          </div>
+          <div class="col-lg-6 order-2 order-lg-1">
+            <img class="img-fluid mb-4" src="images/credo_img_1.jpg" alt="Image">
+          </div>
+          <div class="col-lg-6 order-3 pl-lg-5 order-lg-2">
+            <div class="mb-5">
+              <strong class="text-black">Smart Start</strong>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                  style="width: 65%; background-color: #000000;">
+                  <span>65%</span>
+                </div>
+              </div>
+            </div>
+            <div class="mb-5">
+              <strong class="text-black">Smart connection</strong>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                  style="width: 70%;background-color: #000000;">
+                  <span>70%</span>
+                </div>
+              </div>
+            </div>
+            <div class="mb-5">
+              <strong class="text-black">Smart business</strong>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                  style="width: 90%;background-color: #000000;">
+                  <span>90%</span>
+                </div>
+              </div>
+            </div>
+            <div class="mb-5">
+              <strong class="text-black">Smart technology</strong>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                  style="width: 60%;background-color: #000000;">
+                  <span>60%</span>
+                </div>
+              </div>
+            </div> 
+            <div class="mb-5">
+              <strong class="text-black">Smart project</strong>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                  style="width: 85%;background-color: #000000;">
+                  <span>85%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+        <div class="container">
+          <div class="row" style="color: #000">
+            <p>Het afgelopen half jaar was zeker geen makkelijk half jaar. 
+              Van tevoren had ik een hele andere voorstelling van de minor. 
+              Dit was zeker een knop die ik om moest zetten.
+              Tijdens sommige lessen had ik echt moeite om mijn aandacht erbij te houden, maar ik ben trots op wat ik kan door deze minor.
+              Het project heb ik vanaf het eerste moment serieus genomen en ik ben heel tevreden met wat we hebben neergezet in deze korte periode. <br><br>
+              De vakken hebben mij veel kennis bijgebracht, maar ook van de klasgenoten heb ik veel geleerd.
+              Daarnaast heb ik ook veel over mezelf geleerd. Ik heb tijdens dit half jaar namelijk echt laten zien dat ik doorzettingsvermogen heb en dat wist ik helemaal niet. 
+              Bij veel opdrachten had ik moeite om ze te maken en ik heb dan ook veel geleerd over het spreekwoord "try, fail, fly".
+               Het was namelijk erg interessant om met zoveel verschillende mensen bij elkaar te zijn, vooral omdat iedereen andere kwaliteiten heeft en je zag duidelijk dat kwaliteiten combineren kan zorgen voor een geweldig resultaat.</p>
+            <p> De kennis die ik vanuit de vakken heb geleerd is heel divers. 
+              Van tevoren zou ik nooit een website in elkaar kunnen zetten of kunnen zorgen dat een sensor werkt.
+              Ik wist niet eens wat html en command prompt waren.
+               Ook op het gebied van business heb ik veel geleerd over hoe bedrijven steeds meer technologie omarmen en hier meer kennis nodig hebben om het maximale resultaat eruit te halen. 
+               Achteraf had ik misschien niet dezelfde minor gekozen, maar ik heb wel erg veel van deze minor geleerd en daar ben ik heel blij mee. </p>
+
           </div>
         </div>
-        <form action="#" class="form">
-          <div class="row mb-4">
-            <div class="form-group col-6">
-              <input type="text" class="form-control" placeholder="voornaam">
-            </div>
-            <div class="form-group col-6">
-              <input type="text" class="form-control" placeholder="achternaam">
-            </div>
-          </div>
+      </div>
+    </div>
 
-          <div class="row mb-4">
-            <div class="form-group col-12">
-              <input type="email" class="form-control" placeholder="e-mailadress">
-            </div>
-          </div>
-
-          <div class="row mb-4">
-            <div class="form-group col-12">
-              <input type="text" class="form-control" placeholder="onderwerp van het bericht">
-            </div>
-          </div>
-
-          <div class="row mb-4">
-            <div class="form-group col-12">
-              <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="plaats hier uw bericht"></textarea>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-6">
-              <input type="submit" class="btn btn-dark" value="verzend het bericht">
-            </div>
-          </div>
           
         </form>
       </div>
     </section>
 
-         
-        <div class="row">
-          <div class="col-12 text-center">
+    <section class="" id="contact-section" style="width: 100%;">
+
+        <div class="row center">
+          <div class="text-center">
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            <p>Copyright &copy;
-            <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i
+          
+              <div role="social-icons" >
+                <a style="text-align: center; color: #000; padding: 50px; font-size: 24px;"  href="https://www.instagram.com/stefmerkx/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a style="color: #000; padding: 50px; font-size: 24px;" href="https://www.linkedin.com/in/stef-merkx-9b1108153/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a style="color: #000; padding: 50px; font-size: 24px;"  href="mailto:stmerkx@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+              </div>
+              <p style="text-align: center;">Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i
               class="icon-heart-o" aria-hidden="true"></i> by Stef Merkx</a></p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             
           </div>
         </div>
       </div>
+    </section>
+
     </footer>
 
   </div> <!-- .site-wrap -->
